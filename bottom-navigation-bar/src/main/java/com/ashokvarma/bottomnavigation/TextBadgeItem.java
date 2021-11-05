@@ -116,6 +116,14 @@ public class TextBadgeItem extends BadgeItem<TextBadgeItem> {
         }
         return this;
     }
+    
+    public TextBadgeItem setTextSize(final float textSize) {
+        if (!isWeakReferenceValid()) {
+            return this;
+        }
+        getTextView().get().setTextSize(textSize);
+        return this;
+    }
 
     /**
      * @param colorResource resource for border color
